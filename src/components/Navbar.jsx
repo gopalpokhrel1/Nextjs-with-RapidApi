@@ -22,7 +22,7 @@ export default function Navbar() {
       <>
         <nav className={styles.nav}>
             <section className="logo">
-                <Link href='/'><Image  src="/logo.png" width={300} height={300} className={styles.image} /></Link>
+                <Link href='/'><Image  src="/logo.png" width={300} height={300} className={styles.image} alt='Photo' /></Link>
             </section>
 
             <section>

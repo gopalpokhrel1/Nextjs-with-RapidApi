@@ -1,9 +1,10 @@
+import Herosection from "@/components/Herosection";
 
 
 export default function About() {
   return (
     <>
-      <h1>About Page</h1>
+      <Herosection title='About page'/>
     </>
   )
 }

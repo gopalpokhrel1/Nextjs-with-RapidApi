@@ -1,11 +1,13 @@
 
 
+import Herosection from '@/components/Herosection'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
         <>
-         <h1>Root page</h1>
+         
+         <Herosection title='root page'/>
         </>
   )
 }
