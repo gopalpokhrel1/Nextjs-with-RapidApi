@@ -1,5 +1,6 @@
-import Box from "@/components/Box";
+
 import Moviesection from "@/components/Moviesection";
+import styles from "@/components/Movie.module.css" 
 
 
 export default async function  Movie() {
@@ -23,15 +24,23 @@ export default async function  Movie() {
   const main_content = fetchdata.titles;
 
 
+
+
   return (
     <>
-        {
-          main_content.map((item)=>{
-            return(
-              <Moviesection  value={item}/>
-            )
-          })
-        }
+    <section  className={styles.movie_grid}>
+       {
+        main_content.map((item)=>{
+          return(
+           
+            <section >
+              <Moviesection key={item.id} value={item}/>
+            </section>
+
+          )
+        })
+       }
+       </section>
     </>
   )
 }

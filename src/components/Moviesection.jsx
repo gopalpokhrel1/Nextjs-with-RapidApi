@@ -1,23 +1,38 @@
-import Box from './Box';
-import style from './Movie.module.css';
+
+import Link from 'next/link';
+import style from './Box.module.css';
+import Image from 'next/image';
 
 
 export default function Moviesection({value}) {
 
-  const {id,type,title}= value.jawSummary
+   const {id, type, title ,synopsis,backgroundImage} = value.jawSummary;
+
+
+
+
+
+
   return (
     <>
-      <section className={style.movie_content}>
-        <h1>Movies</h1>
-        <section className={style.movie_grid}>
-              <Box id={id}/>
-              <Box/>
-              <Box/>
-              <Box/>
-              <Box/>
-              <Box/>
-        </section>
+    <main className={style.box}>
+      
+      <section className={style.image}>
+        <Image
+          src={backgroundImage.url}
+          alt="image"
+          width={100}
+          height={100}
+          className={style.image}
+        />
       </section>
+      <h1>{title}</h1>
+      <p>
+       {synopsis}
+      </p>
+      <Link href={`/movie/${id}`}><button>watch</button></Link>
+    
+  </main>
     </>
   )
 }
